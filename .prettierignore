@@ -1,0 +1,4 @@
+# Generated bundles should not be formatted
+/node_modules/
+/KoLmafia/
+node_modules

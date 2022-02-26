@@ -1,0 +1,40 @@
+{
+  "name": "locket-ui",
+  "version": "0.0.1",
+  "description": "Relay override script for combat lover's locket",
+  "main": "KoLmafia/scripts/locket-ui/relay_locket.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "yarn run build:types && yarn run build:js && yarn run copydata && yarn run copycss",
+    "build:types": "tsc",
+    "build:js": "webpack",
+    "copydata": "copyfiles --up 3 \"src/relay/assets/data/*\" \"KoLmafia/\"",
+    "copycss": "copyfiles --up 3 \"src/relay/assets/css/locket-ui.css\" \"KoLmafia/relay/locket/\"",
+    "lint": "eslint src && prettier --check .",
+    "lint:fix": "eslint src --fix && prettier --check --write .",
+    "watch": "yarn run build:types && yarn run watch:js",
+    "watch:js": "webpack --watch --progress"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "kolmafia": "^2.1.1",
+    "libram": "^0.6.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "babel-loader": "^8.2.3",
+    "copyfiles": "^2.4.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

@@ -1,0 +1,98 @@
+[
+    {
+        "title": "Grey You",
+        "monsters": [
+            {
+                "id": 2060,
+                "text": "fat loot token"
+            },
+            {
+                "id": 1434,
+                "text": "leveling spell"
+            }
+        ]
+    },
+    {
+        "title": "General Ascension",
+        "monsters": [
+            {
+                "id": 1153
+            },
+            {
+                "id": 529,
+                "text": "barrel of gunpowder"
+            },
+            {
+                "id": 1185
+            },
+            {
+                "id": 950,
+                "text": "white pixels"
+            },
+            {
+                "id": 577,
+                "text": "war outfit + goodies"
+            },
+            {
+                "id": 184,
+                "text": "star chart"
+            },
+            {
+                "id": 541,
+                "text": "2x star, 2x line"
+            },
+            {
+                "id": 1072,
+                "text": "cyrpt quest"
+            },
+            {
+                "id": 2104,
+                "text": "sleaze scalar"
+            },
+            {
+                "id": 1010,
+                "text": "open bat hole zone"
+            },
+            {
+                "id": 48,
+                "text": "enchanted bean & sonar"
+            },
+            {
+                "id": 1163,
+                "text": "3x stone wool"
+            },
+            {
+                "id": 492,
+                "text": "green smoke bomb"
+            },
+            {
+                "id": 1526,
+                "text": "lynyrd snare"
+            },
+            {
+                "id": 1238,
+                "text": "3x bubblin' crude"
+            },
+            {
+                "id": 228,
+                "text": "forest tears"
+            },
+            {
+                "id": 83,
+                "text": "goat cheese"
+            },
+            {
+                "id": 456,
+                "text": "mojo filter"
+            },
+            {
+                "id": 460,
+                "text": "drum machine"
+            },
+            {
+                "id": 1559,
+                "text": "-5% combat acc"
+            }
+        ]
+    }
+]
