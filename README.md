@@ -2,7 +2,7 @@
 A relay override for the combat lover's locket in Kingdom of Loathing
 
 ### Getting started
-TODO: `svn checkout SOMETHING`
+`svn checkout https://github.com/Loathing-Associates-Scripting-Society/locket-ui/tree/main/KoLmafia`
 
 ### Customization
 ```
