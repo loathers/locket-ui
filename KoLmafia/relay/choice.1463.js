@@ -1914,7 +1914,11 @@ function main(pageTextEncoded) {
   var customFile = (0,external_kolmafia_namespaceObject.fileToBuffer)("locket_relay_monsters_custom.json");
 
   if (customFile) {
-    sections = JSON.parse(customFile);
+    try {
+      sections = JSON.parse(customFile);
+    } catch (e) {
+      (0,external_kolmafia_namespaceObject.print)('Error parsing custom JSON. Using default monster list.', 'red');
+    }
   }
 
   sections.forEach(section => {

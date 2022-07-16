@@ -1,4 +1,4 @@
-import { fileToBuffer, myHash, toMonster, urlDecode, visitUrl, writeln, xpath } from "kolmafia";
+import { fileToBuffer, myHash, print, toMonster, urlDecode, visitUrl, writeln, xpath } from "kolmafia";
 import { get } from "libram";
 import { MonsterData, Section } from "./common/types";
 
@@ -29,7 +29,11 @@ export function main(pageTextEncoded: string): void {
     let sections: Section[] = JSON.parse(fileToBuffer("locket_relay_monsters.json"));
     const customFile = fileToBuffer("locket_relay_monsters_custom.json");
     if (customFile) {
-        sections = JSON.parse(customFile);
+        try {
+            sections = JSON.parse(customFile);
+        } catch (e) {
+            print('Error parsing custom JSON. Using default monster list.', 'red');
+        }
     }
 
     sections.forEach(section => {

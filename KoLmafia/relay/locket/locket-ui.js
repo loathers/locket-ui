@@ -8919,7 +8919,7 @@ function PhlyumChooser_arrayWithHoles(arr) {
 
 
 
-var PHYLA = ['All', 'Beast', 'Bug', 'Constellation', 'Construct', 'Demon', 'Dude', 'Elemental', 'Elf', 'Goblin', 'Hippy', 'Hobo', 'Humanoid', 'Horror', 'Mer-Kin', 'Orc', 'Penguin', 'Pirate', 'Plant', 'Slime', 'Undead', 'Weird'];
+var PHYLA = ["All", "Beast", "Bug", "Constellation", "Construct", "Demon", "Dude", "Elemental", "Elf", "Fish", "Goblin", "Hippy", "Hobo", "Humanoid", "Horror", "Mer-Kin", "Orc", "Penguin", "Pirate", "Plant", "Slime", "Undead", "Weird"];
 
 function PhylumChooser(availableMonsters) {
   var _React$useState = react.useState([]),
@@ -8927,7 +8927,7 @@ function PhylumChooser(availableMonsters) {
       enchantments = _React$useState2[0],
       setEnchantments = _React$useState2[1];
 
-  var _React$useState3 = react.useState(''),
+  var _React$useState3 = react.useState(""),
       _React$useState4 = PhlyumChooser_slicedToArray(_React$useState3, 2),
       image = _React$useState4[0],
       setImage = _React$useState4[1];
@@ -8937,7 +8937,7 @@ function PhylumChooser(availableMonsters) {
       advCount = _React$useState6[0],
       setAdvCount = _React$useState6[1];
 
-  var _React$useState7 = react.useState(''),
+  var _React$useState7 = react.useState(""),
       _React$useState8 = PhlyumChooser_slicedToArray(_React$useState7, 2),
       monsterName = _React$useState8[0],
       setMonsterName = _React$useState8[1];
@@ -8954,11 +8954,11 @@ function PhylumChooser(availableMonsters) {
       setSelectedMonster = _React$useState10[1];
 
   var onMonsterUpdated = function onMonsterUpdated() {
-    var selectedMonsterId = document.getElementById('monster').value;
+    var selectedMonsterId = document.getElementById("monster").value;
     var enchantments = [],
-        image = 'data:,',
+        image = "data:,",
         adventures = 0,
-        name = '',
+        name = "",
         monster = {};
 
     if (selectedMonsterId) {
@@ -8982,11 +8982,11 @@ function PhylumChooser(availableMonsters) {
       setOptions = _React$useState12[1];
 
   function updateOptions() {
-    var onlyFree = document.getElementById('freeFightOnly') ? document.getElementById('freeFightOnly').checked : false;
-    var phylum = document.getElementById('phylum') ? document.getElementById('phylum').value.toLowerCase() : 'all';
+    var onlyFree = document.getElementById("freeFightOnly") ? document.getElementById("freeFightOnly").checked : false;
+    var phylum = document.getElementById("phylum") ? document.getElementById("phylum").value.toLowerCase() : "all";
     var options = [];
     monsters.forEach(function (monster) {
-      if (phylum === 'all' || phylum === monster.phylum) {
+      if (phylum === "all" || phylum === monster.phylum) {
         if (!onlyFree || monster.free) {
           options.push( /*#__PURE__*/react.createElement("option", {
             value: monster.id
@@ -9001,7 +9001,7 @@ function PhylumChooser(availableMonsters) {
   react.useEffect(onMonsterUpdated, [options]);
   return /*#__PURE__*/react.createElement("div", {
     style: {
-      display: 'inline-flex'
+      display: "inline-flex"
     }
   }, /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement("select", {
     id: "monster",
@@ -9016,7 +9016,7 @@ function PhylumChooser(availableMonsters) {
   }, PHYLA.map(function (phylum) {
     return /*#__PURE__*/react.createElement("option", {
       value: phylum
-    }, phylum);
+    }, phylum, " | ", EFFECTS[phylum.toLowerCase()].join(', '));
   }))))), /*#__PURE__*/react.createElement(components_MonsterButton, selectedMonster));
 }
 
