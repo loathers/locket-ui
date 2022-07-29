@@ -4,7 +4,17 @@ A relay override for the combat lover's locket in Kingdom of Loathing
 ![image](https://user-images.githubusercontent.com/17497392/155977434-45dfb93a-e73d-4815-83a8-f37912d6de58.png)
 
 ## Getting started
-`svn checkout https://github.com/Loathing-Associates-Scripting-Society/locket-ui/branches/main/KoLmafia`
+`git checkout https://github.com/Loathing-Associates-Scripting-Society/locket-ui.git`
+
+### Migrating from SVN to Git
+
+With Mafia support now implemented for git you can now remove the old SVN repo and convert to git.
+
+```
+svn delete Loathing-Associates-Scripting-Society-locket-ui-branches-main-KoLmafia
+```
+
+Then install locket-ui as normal.
 
 ## Features
 - Filter reminiscable monster dropdown by phylum and adventure cost.
