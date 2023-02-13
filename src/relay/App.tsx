@@ -32,10 +32,12 @@ function App({ sections, phylum, locketMonsters, availableMonsters, pwd }: Relay
       </div>
       {preferences}
       <div>Reminisced today: {locketMonsters.join(', ')}</div>
-      <div style={{ display: 'inline-flex' }}>
-        <span style={{ alignSelf: 'center' }}>Current Enchantment:</span>
-        <span className="enchantment">{EFFECTS[phylum][0]}<br />{EFFECTS[phylum][1]}</span>
-      </div>
+      { phylum && 
+        <div style={{ display: 'inline-flex' }}>
+          <span style={{ alignSelf: 'center' }}>Current Enchantment:</span>
+          <span className="enchantment">{EFFECTS[phylum][0]}<br />{EFFECTS[phylum][1]}</span>
+        </div>
+      }
     </div>
   );
 }
