@@ -4,7 +4,7 @@ import SectionComponent from "./components/Section";
 import PhylumChooser from "./components/PhlyumChooser";
 import { EFFECTS } from "../common/constants";
 
-function App({ sections, phylum, locketMonsters, availableMonsters, pwd }: RelayData): JSX.Element {
+function App({ foughtMonsters, sections, phylum, locketMonsters, availableMonsters, pwd }: RelayData): JSX.Element {
   const preferences = sections.map((section) => (
     <SectionComponent {...section} />
   ));

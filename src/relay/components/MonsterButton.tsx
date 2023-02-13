@@ -11,7 +11,7 @@ function MonsterButton(parentMonster: MonsterData): JSX.Element {
     }, [parentMonster]);
 
     const image = monster.img ? `/images/adventureimages/${monster.img}` : '/images/itemimages/confused.gif'
-    const className = `monster-button ${monster.available ? '' : 'disabled'}`;
+    const className = `monster-button ${monster.available ? '' : monster.fought ? 'fought' : 'disabled'}`;
 
     const reminisceMonster = () => {
 
