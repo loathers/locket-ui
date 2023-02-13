@@ -7,8 +7,10 @@ export function main(pageTextEncoded: string): void {
     const pageText = urlDecode(pageTextEncoded);
     let phylumReal = get('locketPhylum') || ''
     const phylum = phylumReal.toString();
-    const locketMonsters = get('_locketMonstersFought').split(',').map((id) => (toMonster(id).name));
+    const foughtMonsters = get('_locketMonstersFought', '').split(',');
+    const locketMonsters = foughtMonsters.map((id) => (toMonster(id).name));
     let availableMonsters: { [key: number]: MonsterData } = {};
+    
     if (locketMonsters.length !== 3) {
         let availableIds = xpath(pageText, '//form[@action="choice.php"]//option/@value');
         availableIds.forEach((id) => {
@@ -44,6 +46,7 @@ export function main(pageTextEncoded: string): void {
             monsterData.phylum = monster.phylum.toString();
             monsterData.free = monster.attributes.includes('FREE');
             monsterData.available = Boolean(availableMonsters[monsterData.id]);
+            monsterData.fought = foughtMonsters.includes(monsterData.id.toString());
         });
     });
     writeln('<link rel="stylesheet" href="./locket/css/locket-ui.css">')

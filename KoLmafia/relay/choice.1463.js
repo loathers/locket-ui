@@ -1890,7 +1890,8 @@ function main(pageTextEncoded) {
   var pageText = (0,external_kolmafia_namespaceObject.urlDecode)(pageTextEncoded);
   var phylumReal = get('locketPhylum') || '';
   var phylum = phylumReal.toString();
-  var locketMonsters = get('_locketMonstersFought').split(',').map(id => (0,external_kolmafia_namespaceObject.toMonster)(id).name);
+  var foughtMonsters = get('_locketMonstersFought', '').split(',');
+  var locketMonsters = foughtMonsters.map(id => (0,external_kolmafia_namespaceObject.toMonster)(id).name);
   var availableMonsters = {};
 
   if (locketMonsters.length !== 3) {
@@ -1929,6 +1930,7 @@ function main(pageTextEncoded) {
       monsterData.phylum = monster.phylum.toString();
       monsterData.free = monster.attributes.includes('FREE');
       monsterData.available = Boolean(availableMonsters[monsterData.id]);
+      monsterData.fought = foughtMonsters.includes(monsterData.id.toString());
     });
   });
   (0,external_kolmafia_namespaceObject.writeln)('<link rel="stylesheet" href="./locket/css/locket-ui.css">');

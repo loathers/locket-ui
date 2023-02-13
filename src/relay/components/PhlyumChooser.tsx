@@ -47,7 +47,7 @@ function PhylumChooser(availableMonsters: { [key: number]: MonsterData }): JSX.E
       image = "data:,",
       adventures = 0,
       name = "",
-      monster: MonsterData = {};
+      monster: MonsterData;
     if (selectedMonsterId) {
       monster = availableMonsters[selectedMonsterId];
       enchantments = EFFECTS[monster.phylum];

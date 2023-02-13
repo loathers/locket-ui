@@ -8821,7 +8821,7 @@ function MonsterButton(parentMonster) {
     }
   }, [parentMonster]);
   var image = monster.img ? "/images/adventureimages/".concat(monster.img) : '/images/itemimages/confused.gif';
-  var className = "monster-button ".concat(monster.available ? '' : 'disabled');
+  var className = "monster-button ".concat(monster.available ? '' : monster.fought ? 'fought' : 'disabled');
 
   var reminisceMonster = function reminisceMonster() {};
 
@@ -8959,7 +8959,7 @@ function PhylumChooser(availableMonsters) {
         image = "data:,",
         adventures = 0,
         name = "",
-        monster = {};
+        monster;
 
     if (selectedMonsterId) {
       monster = availableMonsters[selectedMonsterId];
@@ -9028,7 +9028,8 @@ function PhylumChooser(availableMonsters) {
 
 
 function App(_ref) {
-  var sections = _ref.sections,
+  var foughtMonsters = _ref.foughtMonsters,
+      sections = _ref.sections,
       phylum = _ref.phylum,
       locketMonsters = _ref.locketMonsters,
       availableMonsters = _ref.availableMonsters,

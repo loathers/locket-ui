@@ -39,11 +39,17 @@ input {
     padding: 5px 15px;
     cursor: pointer;
     max-width: 250px;
+    max-height: 54px;
 }
 
 .disabled {
     pointer-events: none;
     color: #ccc;
+}
+
+.fought {
+    pointer-events: none;
+    color:rgb(252, 105, 105);
 }
 
 .monster-text {

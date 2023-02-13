@@ -10,6 +10,7 @@ export type MonsterData = {
     available: boolean;
     phylum: string;
     free: boolean;
+    fought?: boolean;
 };
 
 export type RelayData = {
