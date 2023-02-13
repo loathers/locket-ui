@@ -9072,7 +9072,7 @@ function App(_ref) {
     className: "section"
   }, /*#__PURE__*/react.createElement("div", {
     className: "section-title"
-  }, "Reminiscing About Those Monsters You Fought"), /*#__PURE__*/react.createElement("div", null, "You look at the photographs in your locket, every time you do it makes you laugh (as you reminisce). You debate which fight to relive."), /*#__PURE__*/react.createElement(PhlyumChooser, availableMonsters)), preferences, /*#__PURE__*/react.createElement("div", null, "Reminisced today: ", locketMonsters.join(', ')), /*#__PURE__*/react.createElement("div", {
+  }, "Reminiscing About Those Monsters You Fought"), /*#__PURE__*/react.createElement("div", null, "You look at the photographs in your locket, every time you do it makes you laugh (as you reminisce). You debate which fight to relive."), /*#__PURE__*/react.createElement(PhlyumChooser, availableMonsters)), preferences, /*#__PURE__*/react.createElement("div", null, "Reminisced today: ", locketMonsters.join(', ')), phylum && /*#__PURE__*/react.createElement("div", {
     style: {
       display: 'inline-flex'
     }
